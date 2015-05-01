@@ -1,46 +1,46 @@
 <?xml version="1.0"?>
 <config>
   <modules>
-    <Skudler_Connect>
+    <Skudler_SConnect>
       <version>0.1.0</version>
-    </Skudler_Connect>
+    </Skudler_SConnect>
   </modules>
   <global>
     <helpers>
-      <connect>
-        <class>Skudler_Connect_Helper</class>
-      </connect>
+      <sconnect>
+        <class>Skudler_SConnect_Helper</class>
+      </sconnect>
     </helpers>
 	<blocks>
-	  <connect>
-		<class>Skudler_Connect_Block</class>
-	  </connect>
+	  <sconnect>
+		<class>Skudler_SConnect_Block</class>
+	  </sconnect>
 	</blocks>
   </global>
   <admin>
 	<routers>
-	  <connect>
+	  <sconnect>
 	    <use>admin</use>
 		<args>
-		  <module>Skudler_Connect</module>
-		  <frontName>admin_connect</frontName>
+		  <module>Skudler_SConnect</module>
+		  <frontName>admin_sconnect</frontName>
 		</args>
-	  </connect>
+	  </sconnect>
 	</routers>
   </admin>
   <adminhtml>
 	<menu>
-	  <connect module="connect">
-		<title>Connect</title>
+	  <sconnect module="sconnect">
+		<title>SConnect</title>
 		<sort_order>100</sort_order>
 		<children>
-		  <connectbackend module="connect">
+		  <sconnectbackend module="sconnect">
 			<title>Backend Page Title</title>
 			<sort_order>0</sort_order>
-			<action>admin_connect/adminhtml_connectbackend</action>
-		  </connectbackend>
+			<action>admin_sconnect/adminhtml_sconnectbackend</action>
+		  </sconnectbackend>
 		</children>
-	  </connect>
+	  </sconnect>
 	</menu>
 	<acl>
 	  <resources>
@@ -49,24 +49,24 @@
 		</all>
 		<admin>
 		  <children>
-			<connect translate="title" module="connect">
-			  <title>Connect</title>
+			<sconnect translate="title" module="sconnect">
+			  <title>SConnect</title>
 			  <sort_order>1000</sort_order>
 			  <children>
-		  <connectbackend translate="title">
+		  <sconnectbackend translate="title">
 			<title>Backend Page Title</title>
-		  </connectbackend>
+		  </sconnectbackend>
 			  </children>
-			</connect>
+			</sconnect>
 		  </children>
 		</admin>
 	  </resources>
 	</acl>
 	<layout>
 	  <updates>
-		<connect>
-		  <file>connect.xml</file>
-		</connect>
+		<sconnect>
+		  <file>sconnect.xml</file>
+		</sconnect>
 	  </updates>
 	</layout>
   </adminhtml>

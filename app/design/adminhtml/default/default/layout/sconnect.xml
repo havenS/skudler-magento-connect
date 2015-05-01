@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <sconnect_adminhtml_connectbackend_index>
+	<reference name="content">
+	  <block type="sconnect/adminhtml_sconnectbackend" name="sconnectbackend" template="sconnect/sconnectbackend.phtml"/>
+	</reference>
+  </sconnect_adminhtml_connectbackend_index>
+</layout>

@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <config>
 	  <tabs>
-		<skudler_tab translate="label" module="connect">
+		<skudler_tab translate="label" module="sconnect">
             <label>Skudler</label>
             <sort_order>0</sort_order>
         </skudler_tab>
 	  </tabs>
 	  <sections>
-		<skudler_section  translate="label" module="connect">                    
+		<skudler_section  translate="label" module="sconnect">                    
 		<label>Skudler</label>
 		<tab>skudler_tab</tab>
 		<frontend_type>text</frontend_type>
