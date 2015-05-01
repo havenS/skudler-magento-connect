@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Skudler_Connect>
+      <version>0.1.0</version>
+    </Skudler_Connect>
+  </modules>
+  <global>
+    <helpers>
+      <connect>
+        <class>Skudler_Connect_Helper</class>
+      </connect>
+    </helpers>
+	<blocks>
+	  <connect>
+		<class>Skudler_Connect_Block</class>
+	  </connect>
+	</blocks>
+  </global>
+  <admin>
+	<routers>
+	  <connect>
+	    <use>admin</use>
+		<args>
+		  <module>Skudler_Connect</module>
+		  <frontName>admin_connect</frontName>
+		</args>
+	  </connect>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <connect module="connect">
+		<title>Connect</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <connectbackend module="connect">
+			<title>Backend Page Title</title>
+			<sort_order>0</sort_order>
+			<action>admin_connect/adminhtml_connectbackend</action>
+		  </connectbackend>
+		</children>
+	  </connect>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<connect translate="title" module="connect">
+			  <title>Connect</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <connectbackend translate="title">
+			<title>Backend Page Title</title>
+		  </connectbackend>
+			  </children>
+			</connect>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<connect>
+		  <file>connect.xml</file>
+		</connect>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 

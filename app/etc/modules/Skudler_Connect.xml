@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Skudler_Connect>
+      <active>true</active>
+      <codePool>community</codePool>
+      <version>0.1.0</version>
+    </Skudler_Connect>
+  </modules>
+</config>
