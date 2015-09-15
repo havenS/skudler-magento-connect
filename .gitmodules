@@ -1,0 +1,3 @@
+[submodule "app/code/community/Skudler/SConnect/lib/skudler-api"]
+	path = app/code/community/Skudler/SConnect/lib/skudler-api
+	url = https://github.com/havenS/skudler-api.git
